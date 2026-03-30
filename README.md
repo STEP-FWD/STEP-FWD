@@ -1,93 +1,59 @@
 # STEP Protocols
 
-**STEP (Standardized Template for Experimental Procedures)** is an open framework for developing, maintaining, and version-controlling experimental protocols.
+**STEP (Standardized Template for Experimental Procedures)** is an open framework for developing, maintaining, and version-controlling experimental protocols. The framework was initially proposed by [Peter Bøggild et al.](https://www.nature.com/articles/s42254-025-00875-9) and is extended within the **STEP-FWD** project.
 
-This repository contains curated STEP protocols designed to ensure **reproducibility, clarity, and continuous improvement** across experimental workflows.
+This repository contains curated STEP protocols designed to improve **reproducibility, collaboration, and continuous improvement** across experimental workflows.
 
----
+## Purpose and Vision
 
-## Purpose
+STEP-FWD aims to enable:
 
-Experimental procedures are often:
+* More reproducible science
+* Collaborative protocol development
+* Transparent evolution of experimental procedures
 
-* difficult to reproduce
-* inconsistently documented
-* hard to evolve collaboratively
+## Quick Start
 
-STEP addresses this by:
-
-* standardizing protocol structure
-* enabling version control via Git
-* supporting transparent review and iteration
-* maintaining a shared, open knowledge base
-
----
+To be filled by Jaime
 
 ## Repository Structure
 
 ```
 protocols/
-  <domain>/
-    <protocol-name>/
-      protocol.md
-      metadata.yaml
-      figures/
+  <protocol-name>/
+    protocol.md
+    protocol.yaml
+    attachments/
+
 templates/
-schemas/
-docs/
+  protocol.yaml
+
+scripts/
+
+README.md
+CONTRIBUTING.md
+ROADMAP.md
+LICENSE
+
 ```
 
-* `protocol.md` → human-readable protocol
-* `metadata.yaml` → structured metadata (version, authors, equipment, etc.)
-* `figures/` → images and supplementary material
-
----
+* `protocol.yaml` → primary STEP protocol as source for `protocol.md`
+* `protocol.md` → human-readable Markdown version generated from protocol.yaml
+* `attachments/` → supplementary material referenced by the protocol, such as images or tables
 
 ## Protocol Format
 
 Each STEP protocol follows a structured format:
 
-* Description
-* Step-by-step procedure
-* Materials & equipment
-* Parameters and ranges
-* Issues, warnings, troubleshooting
-* Validation and expected outcomes
-* References and supplementary information
-
----
-
-## Versioning
-
-Protocols are version-controlled using Git.
-
-We recommend semantic versioning:
-
-* **MAJOR** → breaking or fundamental changes
-* **MINOR** → improvements or additions
-* **PATCH** → clarifications or minor fixes
-
----
-
-## Contributing
-
-We welcome contributions.
-
-Typical workflow:
-
-1. Fork the repository
-2. Create a new branch
-3. Add or modify a protocol
-4. Submit a pull request
-
-All contributions should:
-
-* follow the STEP template
-* include clear parameter definitions
-* document validation and expected outcomes
-* include safety considerations where applicable
-
----
+* Protocol name
+* Authors, ideally with ORCID
+* Step-by-step procedure including:
+  * Materials and equipment (ME)
+  * Parameters and ranges 
+  * Issues, warnings, troubleshooting, and difficulties (IWTD)
+  * Validation and expected outcomes (VEO)
+* References
+* Supplementary information
 
 ## Governance
 
@@ -95,11 +61,9 @@ Protocols in the `main` branch are considered **reviewed and approved**.
 
 Changes require:
 
-* pull request review
-* consistency with STEP standards
-* clear justification for modifications
-
----
+* Pull request review
+* Consistency with STEP standards
+* Clear justification for modifications
 
 ## License
 
@@ -107,16 +71,6 @@ This repository is licensed under **Creative Commons Attribution-ShareAlike 4.0 
 
 This means:
 
-* you may use, modify, and distribute the protocols
-* you must give appropriate credit
-* any modified versions must be shared under the same license
-
----
-
-## Vision
-
-STEP aims to become a **living standard for experimental procedures**, enabling:
-
-* reproducible science
-* collaborative protocol development
-* transparent evolution of best practices
+* You may use, modify, and distribute the protocols
+* You must give appropriate credit
+* Any modified versions must be shared under the same license
