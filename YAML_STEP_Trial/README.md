@@ -20,13 +20,13 @@ You need to have in your computer python and MkDocs (https://www.mkdocs.org/)
 ### Organizing the structure 
 The folder to run this should be in "pythonpath". For ease of use I put this folder inside my general python folder, so I make sure that it runs. The structure that you have should be exactly as as it is in this folder (that's why directly cloning this would be the best approach). Just to clarify the structure has to be as follows: 
 - folder where python works: 
-    |- docs 
-        |- Protocol_X.yaml
-        |- protocol_Y.yaml
-        |- index.md
-    |- YAML_comvert.py
-    |- mkdocs.yaml
-    |- README.md
+    - docs 
+        - Protocol_X.yaml
+        - protocol_Y.yaml
+        - index.md
+    - YAML_comvert.py
+    - mkdocs.yaml
+    - README.md
 
 #### Explanation of the files 
 - mkdocs: is the leading file. This will create the "website" of the project. It includes the basic architecture of the website. 
