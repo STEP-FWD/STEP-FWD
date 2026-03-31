@@ -157,5 +157,5 @@ Using a micropipette is not strictly necessary but reduces waste and improves pr
 ## A2: Underexposure
 The second pattern was exposed at a 50% higher dose than the first pattern. The first pattern is clearly underexposed as can be seen by badly defined edges and resist residues trapped below the deposited metal film.
 
-![Underexposed pattern](./attachments/attachment_2a.tif)
-![Correctly exposed pattern](./attachments/attachment_2b.tif)
+![Underexposed pattern](./attachments/attachment_2a.png)
+![Correctly exposed pattern](./attachments/attachment_2b.png)
