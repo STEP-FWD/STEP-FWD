@@ -19,20 +19,17 @@ To be filled by Jaime
 ## Repository Structure
 
 ```
-techniques/
-  <technique-name>/
+protocols/
+  techniques/
     <protocol-name>/
       protocol.md
-      protocol.yaml
       attachments/
-devices/
+  devices/
     <protocol-name>/
       protocol.md
-      protocol.yaml
       attachments/
-
-templates/
-  protocol.yaml
+  templates/
+    protocol.md
 
 scripts/
 
@@ -45,9 +42,8 @@ LICENSE
 
 * `protocols/techniques` → protocols organized by technique (e.g. lithography)
 * `protocols/devices` → protocols organized by specific device type (e.g. twisted bilayer graphene)
-* `protocol.yaml` → primary STEP protocol as source for `protocol.md`
-* `protocol.md` → human-readable Markdown version generated from protocol.yaml
-* `attachments/` → supplementary material referenced by the protocol, such as images or tables
+* `protocol.md` → STEP protocol written in Markdown
+* `attachments/` → supplementary material referenced by the protocol, such as images, documents, or tables
 
 ## Protocol Format
 
