@@ -90,6 +90,8 @@ Rinse the front and back of your substrate for ~30 s with distilled water while 
 
 ### 1.4 Substrate dehydration
 
+Dehydrate the substrate by placing it on a hot plate.
+
 #### Materials and equipment (ME)
 * Hot plate
 

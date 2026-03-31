@@ -125,7 +125,6 @@ def _parse_protocol_body(protocol_lines: List[str]) -> List[TabularRow]:
     rows: List[TabularRow] = []
     index = 0
     total = len(protocol_lines)
-    current_step_name = ""
 
     while index < total:
         raw = protocol_lines[index]
@@ -136,7 +135,6 @@ def _parse_protocol_body(protocol_lines: List[str]) -> List[TabularRow]:
         if raw.startswith("## ") and not raw.startswith("###"):
             heading_text = raw[3:].strip()
             step_id, step_name = _split_main_step_heading(heading_text)
-            current_step_name = step_name
             index += 1
             intro_text, index = _collect_intro_lines(protocol_lines, index)
             fields, index = _parse_me_pr_iwtd_veo(protocol_lines, index)
@@ -164,16 +162,18 @@ def _parse_protocol_body(protocol_lines: List[str]) -> List[TabularRow]:
             index += 1
             intro_text, index = _collect_intro_lines(protocol_lines, index)
             fields, index = _parse_me_pr_iwtd_veo(protocol_lines, index)
-            if intro_text:
-                sub_cell = (
-                    f"{sub_name}\n\n{intro_text}" if sub_name else intro_text
-                )
+            if sub_name:
+                bold_title = f"**{sub_name}**"
+                if intro_text:
+                    sub_cell = f"{bold_title}\n\n{intro_text}"
+                else:
+                    sub_cell = bold_title
             else:
-                sub_cell = sub_name
+                sub_cell = intro_text
             rows.append(
                 TabularRow(
                     identifier=sub_id,
-                    step_cell=current_step_name,
+                    step_cell="",
                     substep_cell=sub_cell,
                     materials_equipment=fields["me"],
                     parameters_ranges=fields["pr"],
