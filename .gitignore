@@ -1,1 +1,7 @@
+.venv/
+venv/
+.gitignore
+*.pptx
+YAML_STEP_Trial/site/
 docs/site/
+YAML_STEP_Trial/_mkdocs_site/
